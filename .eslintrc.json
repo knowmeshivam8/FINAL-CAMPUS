@@ -1,3 +1,22 @@
-{
-  "extends": ["next", "next/core-web-vitals"]
-}
+module.exports = {
+  root: true, // marks this as the root config
+  env: {
+    browser: true,
+    node: true,
+    es2021: true,
+  },
+  extends: [
+    'eslint:recommended',          // basic recommended rules
+    'next/core-web-vitals'         // Next.js specific rules
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  rules: {
+    // Add your custom rules here
+    // Example:
+    // 'no-console': 'warn',
+    // 'react/react-in-jsx-scope': 'off'
+  },
+};
